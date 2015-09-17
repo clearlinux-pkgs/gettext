@@ -1,0 +1,2 @@
+# drop all files with '+' in it, borks the updater
+rm -rf %{buildroot}/usr/share/doc/gettext/examples/hello-c++*

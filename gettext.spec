@@ -4,7 +4,7 @@
 #
 Name     : gettext
 Version  : 0.19.6
-Release  : 14
+Release  : 15
 URL      : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.6.tar.xz
 Source0  : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.6.tar.xz
 Summary  : No detailed summary available
@@ -18,6 +18,7 @@ Requires: gettext-locales
 BuildRequires : acl-dev
 BuildRequires : bison
 BuildRequires : emacs
+BuildRequires : glib-dev
 BuildRequires : libtool-dev
 BuildRequires : libxml2
 BuildRequires : ncurses-dev
@@ -101,6 +102,9 @@ rm -rf %{buildroot}
 %make_install
 %find_lang gettext-runtime
 %find_lang gettext-tools
+## make_install_append content
+rm -rf %{buildroot}/usr/share/doc/gettext/examples/hello-c++*
+## make_install_append end
 
 %files
 %defattr(-,root,root,-)
@@ -137,7 +141,6 @@ rm -rf %{buildroot}
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/doc
 /usr/share/doc/libasprintf/autosprintf_all.html
 /usr/share/emacs/site-lisp/po-compat.el
 /usr/share/emacs/site-lisp/po-compat.elc
