@@ -4,7 +4,7 @@
 #
 Name     : gettext
 Version  : 0.19.6
-Release  : 15
+Release  : 16
 URL      : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.6.tar.xz
 Source0  : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.6.tar.xz
 Summary  : No detailed summary available
