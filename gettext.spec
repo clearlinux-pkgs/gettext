@@ -4,7 +4,7 @@
 #
 Name     : gettext
 Version  : 0.19.7
-Release  : 17
+Release  : 18
 URL      : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.7.tar.xz
 Source0  : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.7.tar.xz
 Summary  : No detailed summary available
