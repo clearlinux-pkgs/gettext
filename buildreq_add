@@ -3,9 +3,10 @@
 # desirable. One name per line, no whitespace.
 #
 libtool-dev
-libxml2
+libxml2-dev
 bison
 acl-dev
 emacs
 ncurses-dev
 glib-dev
+libcroco-dev

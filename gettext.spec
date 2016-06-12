@@ -4,7 +4,7 @@
 #
 Name     : gettext
 Version  : 0.19.8.1
-Release  : 21
+Release  : 22
 URL      : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
 Source0  : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
 Summary  : No detailed summary available
@@ -19,8 +19,9 @@ BuildRequires : acl-dev
 BuildRequires : bison
 BuildRequires : emacs
 BuildRequires : glib-dev
+BuildRequires : libcroco-dev
 BuildRequires : libtool-dev
-BuildRequires : libxml2
+BuildRequires : libxml2-dev
 BuildRequires : ncurses-dev
 
 %description
