@@ -235,6 +235,7 @@ libgettextlib-0.19.8.1.so:reset_clixpath
 libgettextlib-0.19.8.1.so:reset_monopath
 libgettextlib-0.19.8.1.so:rpl_canonicalize_file_name
 libgettextlib-0.19.8.1.so:rpl_fcntl
+libgettextlib-0.19.8.1.so:rpl_log10
 libgettextlib-0.19.8.1.so:rpl_mbrtowc
 libgettextlib-0.19.8.1.so:rpl_pipe2
 libgettextlib-0.19.8.1.so:rpl_realpath

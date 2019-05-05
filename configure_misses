@@ -18,7 +18,6 @@ Configure miss: whether included glib is requested
 Configure miss: whether to use the included glib
 Configure miss: whether included libunistring is requested
 Configure miss: libunistring
-Configure miss: whether pow can be used without linking with libm
 Configure miss: whether to activate relocatable installation
 Configure miss: whether C symbols are prefixed with underscore at the linker level
 Configure miss: tparam
@@ -29,7 +28,6 @@ Configure miss: acl_create_entry_np
 Configure miss: acl_to_short_text
 Configure miss: acl_free_text
 Configure miss: ACL_TYPE_EXTENDED
-Configure miss: whether fabs can be used without linking with libm
 Configure miss: Java to native code compiler
 Configure miss: whether included libcroco is requested
 Configure miss: whether to use the included libcroco
@@ -37,6 +35,7 @@ Configure miss: whether included glib is requested
 Configure miss: whether to use the included glib
 Configure miss: whether included libxml is requested
 Configure miss: whether to use the included libxml
+Configure miss: whether log10 works
 Configure miss: whether mbswidth is declared in <wchar.h>
 Configure miss: whether the C compiler is actually a C++ compiler
 Configure miss: obstacks that work with any size object

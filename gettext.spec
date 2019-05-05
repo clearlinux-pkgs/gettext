@@ -6,7 +6,7 @@
 #
 Name     : gettext
 Version  : 0.19.8.1
-Release  : 28
+Release  : 29
 URL      : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
 Source0  : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
 Source99 : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz.sig
@@ -37,18 +37,22 @@ BuildRequires : pkg-config-dev
 Patch1: CVE-2018-18751.patch
 
 %description
-This is the GNU gettext package.  It is interesting for authors or
-maintainers of other packages or programs which they want to see
-internationalized.  As one step the handling of messages in different
-languages should be implemented.  For this task GNU gettext provides
-the needed tools and library functions.
+This is a port of GNU Gettext 0.11.5 to MSDOS/DJGPP.
+TO USE THE GNU GETTEXT LIBRARY YOU **MUST** MODIFY YOUR C-LIBRARY.
+PLEASE, READ SECTION #2 (Installing the binary package) CAREFULLY
+TO LEARN HOW TO INSTALL THE GNU GETTEXT LIBRARY AND HOW TO CHANGE
+YOUR C-LIBRARY AND SYSTEM HEADER FILE.
+TO USE THE GNU GETTEXT LIBRARY YOU **MUST** DOWNLOAD AND INSTALL
+LICV17B.ZIP TOO. THIS IS **NOT** OPTIONAL.
+IT IS NOT RECOMMED TO DOWNLOAD THE GNU DISTRIBUTION OF GETTEXT
+BECAUSE ONLY THE DJGPP PORT WILL CONTAIN THE REQUIRED HEADER AND
+OBJECT FILE TO PATCH THE C LIBRARY.
 
 %package bin
 Summary: bin components for the gettext package.
 Group: Binaries
 Requires: gettext-data = %{version}-%{release}
 Requires: gettext-license = %{version}-%{release}
-Requires: gettext-man = %{version}-%{release}
 
 %description bin
 bin components for the gettext package.
@@ -69,6 +73,7 @@ Requires: gettext-lib = %{version}-%{release}
 Requires: gettext-bin = %{version}-%{release}
 Requires: gettext-data = %{version}-%{release}
 Provides: gettext-devel = %{version}-%{release}
+Requires: gettext = %{version}-%{release}
 
 %description dev
 dev components for the gettext package.
@@ -126,11 +131,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542039709
-export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export SOURCE_DATE_EPOCH=1557078276
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
+export FCFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
+export FFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
+export CXXFLAGS="$CXXFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
 %reconfigure --disable-static
 make
 
@@ -139,10 +147,10 @@ export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 check
+make VERBOSE=1 V=1 check || :
 
 %install
-export SOURCE_DATE_EPOCH=1542039709
+export SOURCE_DATE_EPOCH=1557078276
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gettext
 cp COPYING %{buildroot}/usr/share/package-licenses/gettext/COPYING
