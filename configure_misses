@@ -1,6 +1,7 @@
 Configure miss: Java compiler
 Configure miss: jar
 Configure miss: C# compiler
+Configure miss: windres
 Configure miss: mbslen
 Configure miss: whether realpath works
 Configure miss: whether to activate relocatable installation
@@ -11,6 +12,7 @@ Configure miss: Java compiler
 Configure miss: jar
 Configure miss: C# compiler
 Configure miss: C# program execution engine
+Configure miss: windres
 Configure miss: libxml2/libxml/xmlversion.h
 Configure miss: mbslen
 Configure miss: whether realpath works

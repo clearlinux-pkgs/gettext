@@ -6,10 +6,10 @@
 #
 Name     : gettext
 Version  : 0.19.8.1
-Release  : 29
-URL      : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
-Source0  : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
-Source99 : http://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz.sig
+Release  : 30
+URL      : https://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
+Source1 : https://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0 GPL-3.0+ LGPL-2.0+ LGPL-2.1 MIT
@@ -37,16 +37,11 @@ BuildRequires : pkg-config-dev
 Patch1: CVE-2018-18751.patch
 
 %description
-This is a port of GNU Gettext 0.11.5 to MSDOS/DJGPP.
-TO USE THE GNU GETTEXT LIBRARY YOU **MUST** MODIFY YOUR C-LIBRARY.
-PLEASE, READ SECTION #2 (Installing the binary package) CAREFULLY
-TO LEARN HOW TO INSTALL THE GNU GETTEXT LIBRARY AND HOW TO CHANGE
-YOUR C-LIBRARY AND SYSTEM HEADER FILE.
-TO USE THE GNU GETTEXT LIBRARY YOU **MUST** DOWNLOAD AND INSTALL
-LICV17B.ZIP TOO. THIS IS **NOT** OPTIONAL.
-IT IS NOT RECOMMED TO DOWNLOAD THE GNU DISTRIBUTION OF GETTEXT
-BECAUSE ONLY THE DJGPP PORT WILL CONTAIN THE REQUIRED HEADER AND
-OBJECT FILE TO PATCH THE C LIBRARY.
+This is the GNU gettext package.  It is interesting for authors or
+maintainers of other packages or programs which they want to see
+internationalized.  As one step the handling of messages in different
+languages should be implemented.  For this task GNU gettext provides
+the needed tools and library functions.
 
 %package bin
 Summary: bin components for the gettext package.
@@ -130,27 +125,28 @@ man components for the gettext package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1557078276
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1567275174
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
-export FCFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
-export FFLAGS="$CFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
-export CXXFLAGS="$CXXFLAGS -O3 -fcf-protection=full -ffat-lto-objects -flto=4 -fstack-protector-strong "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
 %reconfigure --disable-static
 make
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 check || :
 
 %install
-export SOURCE_DATE_EPOCH=1557078276
+export SOURCE_DATE_EPOCH=1567275174
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gettext
 cp COPYING %{buildroot}/usr/share/package-licenses/gettext/COPYING

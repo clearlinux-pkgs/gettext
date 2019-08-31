@@ -11,7 +11,10 @@ Remmina
 accountsservice
 adwaita-icon-theme
 amtk
+asunder
 authconfig
+binutils
+brasero
 bzip2
 caribou
 cheese
@@ -19,7 +22,6 @@ clutter
 clutter-gtk
 cockpit
 cogl
-colord-gtk
 compat-gegl
 compat-gegl-0.3
 compat-gspell-soname1
@@ -37,9 +39,11 @@ flatpak
 flatpak-builder
 fontconfig
 gcr
+gdb
 gdk-pixbuf
 gdl
 gdm
+geeqie
 gegl
 geoclue
 gimp
@@ -55,6 +59,7 @@ gnome-menus
 gnome-online-accounts
 gnome-panel
 gnome-photos
+gnome-screensaver
 gnome-screenshot
 gnome-terminal
 gnome-themes-standard
@@ -73,6 +78,8 @@ gtkspell3
 ibus
 ibus-libpinyin
 ibus-table
+ibus-typing-booster
+ibus-unikey
 inkscape
 libcryptui
 libdbusmenu
@@ -81,7 +88,9 @@ libgdata
 libglade
 libgnome-keyring
 libgnomekbd
+libgovirt
 libgtop
+libiptcdata
 liblangtag
 libmypaint
 libosinfo
@@ -113,6 +122,7 @@ powertop
 pulseaudio
 python-rpm-legacypython
 qtwebengine
+redshift
 rhythmbox
 rpm
 shared-mime-info

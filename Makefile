@@ -1,5 +1,5 @@
 PKG_NAME := gettext
-URL = http://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
+URL = https://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common
