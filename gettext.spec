@@ -6,7 +6,7 @@
 #
 Name     : gettext
 Version  : 0.19.8.1
-Release  : 30
+Release  : 31
 URL      : https://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz
 Source1 : https://mirrors.kernel.org/gnu/gettext/gettext-0.19.8.1.tar.xz.sig
@@ -15,6 +15,7 @@ Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0 GPL-3.0+ LGPL-2.0+ LGPL-2.1 MIT
 Requires: gettext-bin = %{version}-%{release}
 Requires: gettext-data = %{version}-%{release}
+Requires: gettext-info = %{version}-%{release}
 Requires: gettext-lib = %{version}-%{release}
 Requires: gettext-license = %{version}-%{release}
 Requires: gettext-locales = %{version}-%{release}
@@ -78,9 +79,18 @@ dev components for the gettext package.
 Summary: doc components for the gettext package.
 Group: Documentation
 Requires: gettext-man = %{version}-%{release}
+Requires: gettext-info = %{version}-%{release}
 
 %description doc
 doc components for the gettext package.
+
+
+%package info
+Summary: info components for the gettext package.
+Group: Default
+
+%description info
+info components for the gettext package.
 
 
 %package lib
@@ -119,6 +129,7 @@ man components for the gettext package.
 
 %prep
 %setup -q -n gettext-0.19.8.1
+cd %{_builddir}/gettext-0.19.8.1
 %patch1 -p1
 
 %build
@@ -126,7 +137,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1567275174
+export SOURCE_DATE_EPOCH=1573791446
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -146,18 +157,18 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 check || :
 
 %install
-export SOURCE_DATE_EPOCH=1567275174
+export SOURCE_DATE_EPOCH=1573791446
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gettext
-cp COPYING %{buildroot}/usr/share/package-licenses/gettext/COPYING
-cp djgpp/COPYING.DJ %{buildroot}/usr/share/package-licenses/gettext/djgpp_COPYING.DJ
-cp gettext-runtime/COPYING %{buildroot}/usr/share/package-licenses/gettext/gettext-runtime_COPYING
-cp gettext-runtime/intl/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/gettext-runtime_intl_COPYING.LIB
-cp gettext-runtime/libasprintf/COPYING %{buildroot}/usr/share/package-licenses/gettext/gettext-runtime_libasprintf_COPYING
-cp gettext-runtime/libasprintf/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/gettext-runtime_libasprintf_COPYING.LIB
-cp gettext-tools/COPYING %{buildroot}/usr/share/package-licenses/gettext/gettext-tools_COPYING
-cp gettext-tools/gnulib-lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/gettext-tools_gnulib-lib_libxml_COPYING
-cp gnulib-local/lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/gnulib-local_lib_libxml_COPYING
+cp %{_builddir}/gettext-0.19.8.1/COPYING %{buildroot}/usr/share/package-licenses/gettext/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/gettext-0.19.8.1/djgpp/COPYING.DJ %{buildroot}/usr/share/package-licenses/gettext/6be9aaee29e73e1b6e3702ea0cc80e1e03ec1319
+cp %{_builddir}/gettext-0.19.8.1/gettext-runtime/COPYING %{buildroot}/usr/share/package-licenses/gettext/b50e61b44f348769338def2b672f3bda98a9680b
+cp %{_builddir}/gettext-0.19.8.1/gettext-runtime/intl/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/66c77efd1cf9c70d4f982ea59487b2eeb6338e26
+cp %{_builddir}/gettext-0.19.8.1/gettext-runtime/libasprintf/COPYING %{buildroot}/usr/share/package-licenses/gettext/54160ca9affa68b0cb83be6f41c35efc194deb0c
+cp %{_builddir}/gettext-0.19.8.1/gettext-runtime/libasprintf/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/66c77efd1cf9c70d4f982ea59487b2eeb6338e26
+cp %{_builddir}/gettext-0.19.8.1/gettext-tools/COPYING %{buildroot}/usr/share/package-licenses/gettext/e04ee5ef8864b1ad305b660ddfd653b86bea6975
+cp %{_builddir}/gettext-0.19.8.1/gettext-tools/gnulib-lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660
+cp %{_builddir}/gettext-0.19.8.1/gnulib-local/lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660
 %make_install
 %find_lang gettext-runtime
 %find_lang gettext-tools
@@ -317,7 +328,8 @@ rm -rf %{buildroot}/usr/share/doc/gettext/examples/hello-c++*
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/*.h
+/usr/include/autosprintf.h
+/usr/include/gettext-po.h
 /usr/lib64/libasprintf.so
 /usr/lib64/libgettextlib-0.19.8.1.so
 /usr/lib64/libgettextlib.so
@@ -339,8 +351,12 @@ rm -rf %{buildroot}/usr/share/doc/gettext/examples/hello-c++*
 %files doc
 %defattr(0644,root,root,0755)
 %doc /usr/share/doc/gettext/*
-%doc /usr/share/info/*
 /usr/share/doc/libasprintf/autosprintf_all.html
+
+%files info
+%defattr(0644,root,root,0755)
+/usr/share/info/autosprintf.info
+/usr/share/info/gettext.info
 
 %files lib
 %defattr(-,root,root,-)
@@ -351,15 +367,13 @@ rm -rf %{buildroot}/usr/share/doc/gettext/examples/hello-c++*
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/gettext/COPYING
-/usr/share/package-licenses/gettext/djgpp_COPYING.DJ
-/usr/share/package-licenses/gettext/gettext-runtime_COPYING
-/usr/share/package-licenses/gettext/gettext-runtime_intl_COPYING.LIB
-/usr/share/package-licenses/gettext/gettext-runtime_libasprintf_COPYING
-/usr/share/package-licenses/gettext/gettext-runtime_libasprintf_COPYING.LIB
-/usr/share/package-licenses/gettext/gettext-tools_COPYING
-/usr/share/package-licenses/gettext/gettext-tools_gnulib-lib_libxml_COPYING
-/usr/share/package-licenses/gettext/gnulib-local_lib_libxml_COPYING
+/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660
+/usr/share/package-licenses/gettext/54160ca9affa68b0cb83be6f41c35efc194deb0c
+/usr/share/package-licenses/gettext/66c77efd1cf9c70d4f982ea59487b2eeb6338e26
+/usr/share/package-licenses/gettext/6be9aaee29e73e1b6e3702ea0cc80e1e03ec1319
+/usr/share/package-licenses/gettext/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+/usr/share/package-licenses/gettext/b50e61b44f348769338def2b672f3bda98a9680b
+/usr/share/package-licenses/gettext/e04ee5ef8864b1ad305b660ddfd653b86bea6975
 
 %files man
 %defattr(0644,root,root,0755)
