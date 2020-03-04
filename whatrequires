@@ -9,7 +9,6 @@ NetworkManager-openvpn
 NetworkManager-vpnc
 PackageKit
 Remmina
-accountsservice
 adwaita-icon-theme
 amtk
 asunder
@@ -27,7 +26,6 @@ compat-gtksourceview-soname3
 connman-gtk
 cups-pk-helper
 dbus
-debugedit
 e2fsprogs
 eog-plugins
 evince
@@ -54,15 +52,14 @@ gnome-photos
 gnome-screensaver
 gnome-screenshot
 gnome-terminal
-gnome-themes-standard
-gnutls
+gnome-themes-extra
 goocanvas
 gparted
 gpaste
 gpredict
 grig
+grisbi
 gspell
-gst-plugins-bad
 gtk+
 gtk3
 gtkspell3
@@ -80,11 +77,11 @@ libglade
 libgnome-keyring
 libgnomekbd
 libgovirt
+libgsf
 libgtop
 libiptcdata
 liblangtag
 libmypaint
-libosinfo
 libqalculate
 librsvg
 libsecret
@@ -101,9 +98,10 @@ metacity
 murrine
 net-tools
 network-manager-applet
+ntopng
 orca
-osinfo-db-tools
 pavucontrol
+pcmanfm
 pidgin
 pidgin-sipe
 pkg-config
@@ -115,7 +113,6 @@ qalculate-gtk
 qtwebengine
 redshift
 rhythmbox
-rpm
 shared-mime-info
 sound-theme-freedesktop
 spice-gtk
