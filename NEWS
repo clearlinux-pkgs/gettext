@@ -1,3 +1,29 @@
+Version 0.20.2 - April 2020
+
+* Improvements for maintainers:
+  - A dependency bug in po/Makefile.in.in has been fixed.
+
+* Programming languages support:
+  - Shell:
+    o The programs 'gettext', 'ngettext', when invoked with option -e, now
+      expand '\\' and octal escape sequences, instead of swallowing them.
+      (Bug present since the beginning.)
+    o xgettext now recognizes 'gettext' program invocations with the '-e'
+      option, such as
+        gettext -e 'some\nstring\n'
+  - Python:
+    xgettext now assumes a Python source file is in UTF-8 encoding by default,
+    as stated in PEP 3120.
+  - Desktop Entry:
+    The value of the 'Icon' property is no longer extracted into the POT file
+    by xgettext.  The documentation explains how to localize icons.
+
+* Runtime behaviour:
+  - The interpretation of the language preferences on macOS has been improved,
+    especially in the case where a system locale does not exist for the
+    combination of the selected primary language and the selected territory.
+  - Fixed a multithread-safety bug on Cygwin and native Windows.
+
 Version 0.20.1 - May 2019
 
 * Important bug fix:
