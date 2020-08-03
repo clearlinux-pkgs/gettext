@@ -11,22 +11,25 @@ Configure miss: mbslen
 Configure miss: fake locale system (OpenBSD)
 Configure miss: Solaris 11.4 locale system
 Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether to activate relocatable installation
 Configure miss: whether C symbols are prefixed with underscore at the linker level
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether the compiler is clang
 Configure miss: compiler option needed when checking for declarations
+Configure miss: g++ option to enable C++11 features
 Configure miss: windres
 Configure miss: whether the compiler is clang
 Configure miss: compiler option needed when checking for declarations
 Configure miss: windres
 Configure miss: crtdefs.h
 Configure miss: 32-bit host C ABI
+Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether pow can be used without linking with libm
 Configure miss: whether printf supports the 'n' directive
 Configure miss: tparam
 Configure miss: whether fabs can be used without linking with libm
-Configure miss: shlload
+Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether the C compiler is actually a C++ compiler
 Configure miss: obstacks that work with any size object
 Configure miss: whether snprintf fully supports the 'n' directive
@@ -40,13 +43,18 @@ Configure miss: C# program execution engine
 Configure miss: windres
 Configure miss: crtdefs.h
 Configure miss: libxml2/libxml/xmlversion.h
+Configure miss: priv.h
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: 32-bit host C ABI
+Configure miss: memset_s
 Configure miss: mbslen
 Configure miss: pthread_sigmask
+Configure miss: mquery
+Configure miss: pstat_getprocvm
 Configure miss: fake locale system (OpenBSD)
 Configure miss: Solaris 11.4 locale system
 Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether included libunistring is requested
 Configure miss: whether pow can be used without linking with libm
 Configure miss: whether to activate relocatable installation
@@ -67,9 +75,9 @@ Configure miss: whether to use the included libxml
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether mbswidth is declared in <wchar.h>
 Configure miss: obstacks that work with any size object
-Configure miss: union wait
 Configure miss: ioctl with POSIX signature
 Configure miss: working nanosleep
+Configure miss: getppriv
 Configure miss: whether pthread_sigmask is a macro
 Configure miss: working re_compile_pattern
 Configure miss: whether to use the included libunistring
