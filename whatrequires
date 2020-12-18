@@ -7,7 +7,6 @@ NetworkManager-l2tp
 NetworkManager-openconnect
 NetworkManager-openvpn
 NetworkManager-vpnc
-PackageKit
 Remmina
 adwaita-icon-theme
 amtk
@@ -15,15 +14,12 @@ asunder
 authconfig
 avahi
 binutils
-brasero
 caribou
 clutter
 clutter-gtk
 cockpit
 cogl
-compat-gspell-soname1
 compat-gtksourceview-soname3
-connman-gtk
 cups-pk-helper
 dbus
 e2fsprogs
@@ -38,7 +34,6 @@ fsearch
 gcr
 gdb
 gdl
-gdm
 geeqie
 gimp
 gnome-applets
@@ -49,7 +44,6 @@ gnome-keyring
 gnome-menus
 gnome-online-accounts
 gnome-panel
-gnome-photos
 gnome-screensaver
 gnome-screenshot
 gnome-terminal
@@ -76,7 +70,6 @@ libfm
 libglade
 libgnome-keyring
 libgnomekbd
-libgovirt
 libgsf
 libgtop
 libiptcdata
@@ -90,12 +83,10 @@ libskk
 libsmbios
 libwacom
 libwnck
-libzapojit
 lightdm
 lightdm-gtk-greeter
 mercurial
 metacity
-murrine
 net-tools
 network-manager-applet
 ntopng
@@ -116,7 +107,6 @@ rhythmbox
 shared-mime-info
 sound-theme-freedesktop
 spice-gtk
-tepl
 thermal_daemon
 thermal_monitor
 tigervnc
@@ -125,7 +115,6 @@ uget
 upower
 usermode
 vinagre
-vino
 virt-viewer
 volume_key
 xdg-desktop-portal

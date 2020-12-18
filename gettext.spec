@@ -6,7 +6,7 @@
 #
 Name     : gettext
 Version  : 0.21
-Release  : 34
+Release  : 35
 URL      : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.tar.xz
 Source1  : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.tar.xz.sig
@@ -130,7 +130,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1596475380
+export SOURCE_DATE_EPOCH=1608251028
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -139,7 +139,7 @@ export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -m
 export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
-%reconfigure --disable-static --enable-silent-rules
+%configure --disable-static --enable-silent-rules
 make
 
 %check
@@ -150,7 +150,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make check || :
 
 %install
-export SOURCE_DATE_EPOCH=1596475380
+export SOURCE_DATE_EPOCH=1608251028
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gettext
 cp %{_builddir}/gettext-0.21/COPYING %{buildroot}/usr/share/package-licenses/gettext/0dd432edfab90223f22e49c02e2124f87d6f0a56

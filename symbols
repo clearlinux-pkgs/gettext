@@ -925,9 +925,6 @@ libgnuintl.so.8:libintl_set_relocation_prefix
 libgnuintl.so.8:libintl_textdomain
 libgnuintl.so.8:ngettext
 libgnuintl.so.8:textdomain
-libtextstyle.so.0:_obstack_begin
-libtextstyle.so.0:_obstack_free
-libtextstyle.so.0:_obstack_newchunk
 libtextstyle.so.0:fd_ostream_create
 libtextstyle.so.0:fd_ostream_flush
 libtextstyle.so.0:fd_ostream_free
