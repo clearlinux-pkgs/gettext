@@ -6,7 +6,7 @@
 #
 Name     : gettext
 Version  : 0.21.1
-Release  : 37
+Release  : 38
 URL      : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.1.tar.xz
 Source1  : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.1.tar.xz.sig
@@ -130,39 +130,39 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1665504148
+export SOURCE_DATE_EPOCH=1665506697
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %configure --disable-static --enable-silent-rules
-make
+make  %{?_smp_mflags}
 
 %check
 export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make check || :
+make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1665504148
+export SOURCE_DATE_EPOCH=1665506697
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gettext
-cp %{_builddir}/gettext-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gettext/0dd432edfab90223f22e49c02e2124f87d6f0a56 || :
-cp %{_builddir}/gettext-%{version}/gettext-runtime/COPYING %{buildroot}/usr/share/package-licenses/gettext/b50e61b44f348769338def2b672f3bda98a9680b || :
-cp %{_builddir}/gettext-%{version}/gettext-runtime/intl/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/66c77efd1cf9c70d4f982ea59487b2eeb6338e26 || :
-cp %{_builddir}/gettext-%{version}/gettext-runtime/libasprintf/COPYING %{buildroot}/usr/share/package-licenses/gettext/54160ca9affa68b0cb83be6f41c35efc194deb0c || :
-cp %{_builddir}/gettext-%{version}/gettext-runtime/libasprintf/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/66c77efd1cf9c70d4f982ea59487b2eeb6338e26 || :
-cp %{_builddir}/gettext-%{version}/gettext-tools/COPYING %{buildroot}/usr/share/package-licenses/gettext/e04ee5ef8864b1ad305b660ddfd653b86bea6975 || :
-cp %{_builddir}/gettext-%{version}/gettext-tools/gnulib-lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660 || :
-cp %{_builddir}/gettext-%{version}/gnulib-local/lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660 || :
-cp %{_builddir}/gettext-%{version}/libtextstyle/COPYING %{buildroot}/usr/share/package-licenses/gettext/0dd432edfab90223f22e49c02e2124f87d6f0a56 || :
-cp %{_builddir}/gettext-%{version}/libtextstyle/lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660 || :
+cp %{_builddir}/gettext-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gettext/0dd432edfab90223f22e49c02e2124f87d6f0a56
+cp %{_builddir}/gettext-%{version}/gettext-runtime/COPYING %{buildroot}/usr/share/package-licenses/gettext/b50e61b44f348769338def2b672f3bda98a9680b
+cp %{_builddir}/gettext-%{version}/gettext-runtime/intl/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/66c77efd1cf9c70d4f982ea59487b2eeb6338e26
+cp %{_builddir}/gettext-%{version}/gettext-runtime/libasprintf/COPYING %{buildroot}/usr/share/package-licenses/gettext/54160ca9affa68b0cb83be6f41c35efc194deb0c
+cp %{_builddir}/gettext-%{version}/gettext-runtime/libasprintf/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/66c77efd1cf9c70d4f982ea59487b2eeb6338e26
+cp %{_builddir}/gettext-%{version}/gettext-tools/COPYING %{buildroot}/usr/share/package-licenses/gettext/e04ee5ef8864b1ad305b660ddfd653b86bea6975
+cp %{_builddir}/gettext-%{version}/gettext-tools/gnulib-lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660
+cp %{_builddir}/gettext-%{version}/gnulib-local/lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660
+cp %{_builddir}/gettext-%{version}/libtextstyle/COPYING %{buildroot}/usr/share/package-licenses/gettext/0dd432edfab90223f22e49c02e2124f87d6f0a56
+cp %{_builddir}/gettext-%{version}/libtextstyle/lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660
 %make_install
 %find_lang gettext-runtime
 %find_lang gettext-tools
