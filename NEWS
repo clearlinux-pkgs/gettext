@@ -1,3 +1,17 @@
+Version 0.21.1 - October 2022
+
+* Runtime behaviour:
+  - On AIX, locale names with a script or with an uppercase language are now
+    supported.
+    For example, sr_Cyrl_RS.UTF-8 is treated like sr_RS.UTF-8@cyrillic, and
+    EN_US.UTF-8 is treated like en_US.UTF-8.
+
+* The base Unicode standard is now updated to 14.0.0.
+
+* Portability:
+  - Building on macOS 11/arm64 is now supported.
+  - Building on Linux/powerpc64le with glibc ≥ 2.35 is now supported.
+
 Version 0.21 - July 2020
 
 * Programming languages support:

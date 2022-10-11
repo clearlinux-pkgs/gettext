@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xF5BE8B267C6A406D (bruno@clisp.org)
 #
 Name     : gettext
-Version  : 0.21
-Release  : 36
-URL      : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.tar.xz
-Source0  : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.tar.xz
-Source1  : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.tar.xz.sig
+Version  : 0.21.1
+Release  : 37
+URL      : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.1.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.1.tar.xz
+Source1  : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.1.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0 GPL-3.0+ LGPL-2.0+ LGPL-2.1 MIT
@@ -122,23 +122,23 @@ man components for the gettext package.
 
 
 %prep
-%setup -q -n gettext-0.21
-cd %{_builddir}/gettext-0.21
+%setup -q -n gettext-0.21.1
+cd %{_builddir}/gettext-0.21.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1608251028
+export SOURCE_DATE_EPOCH=1665504148
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -fzero-call-used-regs=used "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -fzero-call-used-regs=used "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -fzero-call-used-regs=used "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -fzero-call-used-regs=used "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto -fstack-protector-strong -fzero-call-used-regs=used "
 %configure --disable-static --enable-silent-rules
 make
 
@@ -150,19 +150,19 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make check || :
 
 %install
-export SOURCE_DATE_EPOCH=1608251028
+export SOURCE_DATE_EPOCH=1665504148
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gettext
-cp %{_builddir}/gettext-0.21/COPYING %{buildroot}/usr/share/package-licenses/gettext/0dd432edfab90223f22e49c02e2124f87d6f0a56
-cp %{_builddir}/gettext-0.21/gettext-runtime/COPYING %{buildroot}/usr/share/package-licenses/gettext/b50e61b44f348769338def2b672f3bda98a9680b
-cp %{_builddir}/gettext-0.21/gettext-runtime/intl/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/66c77efd1cf9c70d4f982ea59487b2eeb6338e26
-cp %{_builddir}/gettext-0.21/gettext-runtime/libasprintf/COPYING %{buildroot}/usr/share/package-licenses/gettext/54160ca9affa68b0cb83be6f41c35efc194deb0c
-cp %{_builddir}/gettext-0.21/gettext-runtime/libasprintf/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/66c77efd1cf9c70d4f982ea59487b2eeb6338e26
-cp %{_builddir}/gettext-0.21/gettext-tools/COPYING %{buildroot}/usr/share/package-licenses/gettext/e04ee5ef8864b1ad305b660ddfd653b86bea6975
-cp %{_builddir}/gettext-0.21/gettext-tools/gnulib-lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660
-cp %{_builddir}/gettext-0.21/gnulib-local/lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660
-cp %{_builddir}/gettext-0.21/libtextstyle/COPYING %{buildroot}/usr/share/package-licenses/gettext/0dd432edfab90223f22e49c02e2124f87d6f0a56
-cp %{_builddir}/gettext-0.21/libtextstyle/lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660
+cp %{_builddir}/gettext-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gettext/0dd432edfab90223f22e49c02e2124f87d6f0a56 || :
+cp %{_builddir}/gettext-%{version}/gettext-runtime/COPYING %{buildroot}/usr/share/package-licenses/gettext/b50e61b44f348769338def2b672f3bda98a9680b || :
+cp %{_builddir}/gettext-%{version}/gettext-runtime/intl/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/66c77efd1cf9c70d4f982ea59487b2eeb6338e26 || :
+cp %{_builddir}/gettext-%{version}/gettext-runtime/libasprintf/COPYING %{buildroot}/usr/share/package-licenses/gettext/54160ca9affa68b0cb83be6f41c35efc194deb0c || :
+cp %{_builddir}/gettext-%{version}/gettext-runtime/libasprintf/COPYING.LIB %{buildroot}/usr/share/package-licenses/gettext/66c77efd1cf9c70d4f982ea59487b2eeb6338e26 || :
+cp %{_builddir}/gettext-%{version}/gettext-tools/COPYING %{buildroot}/usr/share/package-licenses/gettext/e04ee5ef8864b1ad305b660ddfd653b86bea6975 || :
+cp %{_builddir}/gettext-%{version}/gettext-tools/gnulib-lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660 || :
+cp %{_builddir}/gettext-%{version}/gnulib-local/lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660 || :
+cp %{_builddir}/gettext-%{version}/libtextstyle/COPYING %{buildroot}/usr/share/package-licenses/gettext/0dd432edfab90223f22e49c02e2124f87d6f0a56 || :
+cp %{_builddir}/gettext-%{version}/libtextstyle/lib/libxml/COPYING %{buildroot}/usr/share/package-licenses/gettext/3c21506a45e8d0171fc92fd4ff6903c13adde660 || :
 %make_install
 %find_lang gettext-runtime
 %find_lang gettext-tools
@@ -212,14 +212,14 @@ rm -rf %{buildroot}/usr/share/doc/gettext/examples/hello-c++*
 /usr/share/emacs/site-lisp/po-mode.elc
 /usr/share/emacs/site-lisp/start-po.el
 /usr/share/emacs/site-lisp/start-po.elc
-/usr/share/gettext-0.21/its/glade.loc
-/usr/share/gettext-0.21/its/glade1.its
-/usr/share/gettext-0.21/its/glade2.its
-/usr/share/gettext-0.21/its/gsettings.its
-/usr/share/gettext-0.21/its/gsettings.loc
-/usr/share/gettext-0.21/its/gtkbuilder.its
-/usr/share/gettext-0.21/its/metainfo.its
-/usr/share/gettext-0.21/its/metainfo.loc
+/usr/share/gettext-0.21.1/its/glade.loc
+/usr/share/gettext-0.21.1/its/glade1.its
+/usr/share/gettext-0.21.1/its/glade2.its
+/usr/share/gettext-0.21.1/its/gsettings.its
+/usr/share/gettext-0.21.1/its/gsettings.loc
+/usr/share/gettext-0.21.1/its/gtkbuilder.its
+/usr/share/gettext-0.21.1/its/metainfo.its
+/usr/share/gettext-0.21.1/its/metainfo.loc
 /usr/share/gettext/ABOUT-NLS
 /usr/share/gettext/archive.dir.tar.xz
 /usr/share/gettext/config.rpath
@@ -265,10 +265,10 @@ rm -rf %{buildroot}/usr/share/doc/gettext/examples/hello-c++*
 /usr/include/textstyle/version.h
 /usr/include/textstyle/woe32dll.h
 /usr/lib64/libasprintf.so
-/usr/lib64/libgettextlib-0.21.so
+/usr/lib64/libgettextlib-0.21.1.so
 /usr/lib64/libgettextlib.so
 /usr/lib64/libgettextpo.so
-/usr/lib64/libgettextsrc-0.21.so
+/usr/lib64/libgettextsrc-0.21.1.so
 /usr/lib64/libgettextsrc.so
 /usr/lib64/libtextstyle.so
 /usr/lib64/preloadable_libintl.so
@@ -308,9 +308,9 @@ rm -rf %{buildroot}/usr/share/doc/gettext/examples/hello-c++*
 /usr/lib64/libasprintf.so.0
 /usr/lib64/libasprintf.so.0.0.0
 /usr/lib64/libgettextpo.so.0
-/usr/lib64/libgettextpo.so.0.5.7
+/usr/lib64/libgettextpo.so.0.5.8
 /usr/lib64/libtextstyle.so.0
-/usr/lib64/libtextstyle.so.0.1.1
+/usr/lib64/libtextstyle.so.0.1.2
 
 %files license
 %defattr(0644,root,root,0755)

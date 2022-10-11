@@ -1,84 +1,98 @@
-Configure miss: whether the compiler is clang
-Configure miss: compiler option needed when checking for declarations
-Configure miss: Java compiler
-Configure miss: jar
+Configure miss: 32-bit host C ABI
+Configure miss: 32-bit host C ABI
+Configure miss: 32-bit host C ABI
+Configure miss: ACL_TYPE_EXTENDED
 Configure miss: C# compiler
-Configure miss: windres
-Configure miss: crtdefs.h
-Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
-Configure miss: 32-bit host C ABI
-Configure miss: mbslen
-Configure miss: fake locale system (OpenBSD)
-Configure miss: Solaris 11.4 locale system
-Configure miss: CFLocaleCopyPreferredLanguages
-Configure miss: whether the compiler produces multi-arch binaries
-Configure miss: whether to activate relocatable installation
-Configure miss: whether C symbols are prefixed with underscore at the linker level
-Configure miss: whether mbrtowc stores incomplete characters
-Configure miss: whether the compiler is clang
-Configure miss: compiler option needed when checking for declarations
-Configure miss: g++ option to enable C++11 features
-Configure miss: windres
-Configure miss: whether the compiler is clang
-Configure miss: compiler option needed when checking for declarations
-Configure miss: windres
-Configure miss: crtdefs.h
-Configure miss: 32-bit host C ABI
-Configure miss: whether the compiler produces multi-arch binaries
-Configure miss: whether pow can be used without linking with libm
-Configure miss: whether printf supports the 'n' directive
-Configure miss: tparam
-Configure miss: whether fabs can be used without linking with libm
-Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
-Configure miss: whether the C compiler is actually a C++ compiler
-Configure miss: obstacks that work with any size object
-Configure miss: whether snprintf fully supports the 'n' directive
-Configure miss: whether the compiler is clang
-Configure miss: compiler option needed when checking for declarations
-Configure miss: Java virtual machine
-Configure miss: Java compiler
-Configure miss: jar
 Configure miss: C# compiler
 Configure miss: C# program execution engine
-Configure miss: windres
-Configure miss: crtdefs.h
-Configure miss: libxml2/libxml/xmlversion.h
-Configure miss: priv.h
-Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
-Configure miss: 32-bit host C ABI
-Configure miss: memset_s
-Configure miss: mbslen
-Configure miss: pthread_sigmask
-Configure miss: mquery
-Configure miss: pstat_getprocvm
-Configure miss: fake locale system (OpenBSD)
-Configure miss: Solaris 11.4 locale system
 Configure miss: CFLocaleCopyPreferredLanguages
-Configure miss: whether the compiler produces multi-arch binaries
-Configure miss: whether included libunistring is requested
-Configure miss: whether pow can be used without linking with libm
-Configure miss: whether to activate relocatable installation
-Configure miss: whether C symbols are prefixed with underscore at the linker level
-Configure miss: strerror_r with POSIX signature
-Configure miss: library needed for semaphore functions
-Configure miss: acl_delete_fd_np
-Configure miss: acl_delete_file_np
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: Java compiler
+Configure miss: Java compiler
+Configure miss: Java virtual machine
+Configure miss: Solaris 11.4 locale system
+Configure miss: Solaris 11.4 locale system
+Configure miss: _fseeki64
 Configure miss: acl_copy_ext_native
 Configure miss: acl_create_entry_np
-Configure miss: acl_to_short_text
+Configure miss: acl_delete_fd_np
+Configure miss: acl_delete_file_np
 Configure miss: acl_free_text
-Configure miss: ACL_TYPE_EXTENDED
+Configure miss: acl_to_short_text
+Configure miss: compiler option needed when checking for declarations
+Configure miss: compiler option needed when checking for declarations
+Configure miss: compiler option needed when checking for declarations
+Configure miss: compiler option needed when checking for declarations
+Configure miss: crtdefs.h
+Configure miss: crtdefs.h
+Configure miss: crtdefs.h
+Configure miss: fake locale system (OpenBSD)
+Configure miss: fake locale system (OpenBSD)
+Configure miss: fpurge
+Configure miss: g++ option to enable C++11 features
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: getppriv
+Configure miss: ioctl with POSIX signature
+Configure miss: jar
+Configure miss: jar
+Configure miss: library needed for semaphore functions
+Configure miss: libxml2/libxml/xmlversion.h
+Configure miss: mbslen
+Configure miss: mbslen
+Configure miss: memset_s
+Configure miss: mquery
+Configure miss: obstacks that work with any size object
+Configure miss: obstacks that work with any size object
+Configure miss: posix_spawn_file_actions_addchdir
+Configure miss: priv.h
+Configure miss: pstat_getprocvm
+Configure miss: stdbool.h that conforms to C99 or later
+Configure miss: stdbool.h that conforms to C99 or later
+Configure miss: stdbool.h that conforms to C99 or later
+Configure miss: strerror_r with POSIX signature
+Configure miss: tparam
+Configure miss: whether C symbols are prefixed with underscore at the linker level
+Configure miss: whether C symbols are prefixed with underscore at the linker level
 Configure miss: whether fabs can be used without linking with libm
-Configure miss: whether to use the included libunistring
+Configure miss: whether fabs can be used without linking with libm
+Configure miss: whether fflush works on input streams
+Configure miss: whether fpurge is declared
+Configure miss: whether included libunistring is requested
 Configure miss: whether included libxml is requested
-Configure miss: whether to use the included libxml
+Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether mbswidth is declared in <wchar.h>
-Configure miss: obstacks that work with any size object
-Configure miss: ioctl with POSIX signature
-Configure miss: working nanosleep
-Configure miss: getppriv
+Configure miss: whether pow can be used without linking with libm
+Configure miss: whether pow can be used without linking with libm
+Configure miss: whether printf supports the 'n' directive
+Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
+Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
+Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_sigmask is a macro
-Configure miss: working re_compile_pattern
+Configure miss: whether snprintf fully supports the 'n' directive
+Configure miss: whether the C compiler is actually a C++ compiler
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether this system supports file names of any length
+Configure miss: whether to activate relocatable installation
+Configure miss: whether to activate relocatable installation
 Configure miss: whether to use the included libunistring
-Configure miss: g++ option to enable C++11 features
+Configure miss: whether to use the included libunistring
+Configure miss: whether to use the included libxml
+Configure miss: windres
+Configure miss: windres
+Configure miss: windres
+Configure miss: windres
+Configure miss: working nanosleep
+Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-file
