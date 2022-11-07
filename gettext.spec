@@ -6,7 +6,7 @@
 #
 Name     : gettext
 Version  : 0.21.1
-Release  : 38
+Release  : 39
 URL      : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.1.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.1.tar.xz
 Source1  : https://mirrors.kernel.org/gnu/gettext/gettext-0.21.1.tar.xz.sig
