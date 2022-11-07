@@ -60,7 +60,6 @@ Configure miss: whether fabs can be used without linking with libm
 Configure miss: whether fabs can be used without linking with libm
 Configure miss: whether fflush works on input streams
 Configure miss: whether fpurge is declared
-Configure miss: whether included libunistring is requested
 Configure miss: whether included libxml is requested
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether mbrtowc stores incomplete characters
@@ -84,8 +83,6 @@ Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether this system supports file names of any length
 Configure miss: whether to activate relocatable installation
 Configure miss: whether to activate relocatable installation
-Configure miss: whether to use the included libunistring
-Configure miss: whether to use the included libunistring
 Configure miss: whether to use the included libxml
 Configure miss: windres
 Configure miss: windres
