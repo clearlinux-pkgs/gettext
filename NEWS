@@ -1,3 +1,62 @@
+Version 0.22 - June 2023
+
+* PO file format:
+  - When a #: line contains references to file names that contain spaces,
+    these file names are surrounded by Unicode characters U+2068 and U+2069.
+    This makes it possible to parse such references correctly.
+
+* Improvements for maintainers:
+  - The AM_GNU_GETTEXT macro now defines two variables localedir_c and
+    localedir_c_make, that can be used in C code or in Makefiles,
+    respectively, for representing the value of the --localedir configure
+    option.
+
+* Programming languages support:
+  - C, C++:
+    o xgettext now supports gettext-like functions that take wide strings
+      (of type 'const wchar_t *', 'const char16_t *', or 'const char32_t *')
+      as arguments.
+    o xgettext now recognizes numbers with digit separators, as defined by
+      ISO C 23, as tokens.
+    o xgettext and msgfmt now recognize the format string directive %b
+      (for binary integer output, as defined by ISO C 23) in format strings.
+    o xgettext and msgfmt now recognize the argument size specifiers
+      w8, w16, w32, w64, wf8, wf16, wf32, wf64 (as defined by ISO C 23)
+      in format strings.
+    o xgettext and msgfmt now recognize C++ format strings, as defined by
+      ISO C++ 20.  They are marked as 'c++-format' in POT and PO files.
+      A new example has been added, 'hello-c++20', that illustrates how
+      to use these format strings with gettext.
+  - Java:
+    o The build system and tools now also support Java versions newer than
+      Java 11. This is known to work up to Java 20, at least. On the other
+      hand, support for old versions of Java (Java 1.5 and GCJ) has been
+      dropped.
+  - Tcl: xgettext now supports the \x, \u, and \U escapes as defined in
+    Tcl 8.6.
+
+* Portability:
+  - On systems with musl libc, the *gettext() functions in libc now work
+    with MO files generated from PO files with an encoding other than UTF-8.
+    To this effect, the msgfmt program now converts the messages to UTF-8
+    encoding before storing them in a MO file.  You can prevent this by
+    using the msgfmt --no-convert option.
+  - On systems with musl libc, the *gettext() functions in libc now work
+    with MO files generated from PO files with ISO C 99 <inttypes.h> format
+    string directive macros.  To this effect, the msgfmt program pre-expands
+    strings with such macros.  You can prevent this by using the msgfmt
+    --no-redundancy option.
+
+* xgettext:
+  - The xgettext option '--sorted-output' is now deprecated.
+  - xgettext input files of type PO that are not all ASCII and not UTF-8
+    encoded are now handled correctly.
+
+* The base Unicode standard is now updated to 15.0.0.
+
+* Emacs PO mode:
+  Fix an incompatibility with Emacs version 29 or newer.
+
 Version 0.21.1 - October 2022
 
 * Runtime behaviour:

@@ -1,5 +1,4 @@
 # This file contains recursive sources that require this package
-GConf
 Linux-PAM
 ModemManager
 NetworkManager
@@ -8,7 +7,6 @@ NetworkManager-openconnect
 NetworkManager-openvpn
 NetworkManager-vpnc
 Remmina
-adwaita-icon-theme
 asunder
 authconfig
 avahi
@@ -26,7 +24,6 @@ firewalld
 flatpak
 flatpak-builder
 fontconfig
-fsearch
 gdl
 gimp
 gnome-applets
@@ -45,7 +42,6 @@ grig
 grisbi
 gspell
 gtk+
-gtk3
 gtkspell3
 ibus
 ibus-libpinyin
@@ -57,7 +53,6 @@ libcryptui
 libdbusmenu
 libfm
 libgnome-keyring
-libgnomekbd
 libgphoto2
 libgsf
 libgtop
@@ -82,12 +77,10 @@ pavucontrol
 pcmanfm
 pidgin
 pidgin-sipe
-pkg-config
 popt
 powertop
 pulseaudio
 qalculate-gtk
-qt6base
 qtwebengine
 redshift
 shared-mime-info
@@ -100,12 +93,13 @@ udisks2
 uget
 vinagre
 volume_key
-xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-user-dirs
 xdg-user-dirs-gtk
+xfce4-notifyd
 xfce4-screensaver
 xlog
+xnec2c
 xscreensaver
 yelp
 yelp-xsl
