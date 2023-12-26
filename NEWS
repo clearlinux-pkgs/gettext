@@ -1,3 +1,35 @@
+Version 0.22.4 - November 2023
+
+* Bug fixes:
+  - AM_GNU_GETTEXT now recognizes a statically built libintl on macOS and AIX.
+  - Build fixes on AIX.
+
+Version 0.22.3 - October 2023
+
+* Portability:
+  - The libintl library now works on macOS 14.  (Older versions of libintl
+    crash on macOS 14, due to an incompatible change in macOS.)
+
+Version 0.22.2 - September 2023
+
+* Bug fixes:
+  - The libintl shared library now exports again some symbols that were
+    accidentally missing.
+    <https://savannah.gnu.org/bugs/index.php?64323>
+    This bug was introduced in version 0.22.
+
+Version 0.22.1 - September 2023
+
+* Bug fixes:
+  - xgettext's processing of large Perl files may have led to errors
+    <https://savannah.gnu.org/bugs/index.php?64552>
+  - "xgettext --join-existing" could encounter errors.
+    <https://savannah.gnu.org/bugs/index.php?64490>
+  These bugs were introduced in version 0.22.
+
+* Portability:
+  - Building on Android is now supported.
+
 Version 0.22 - June 2023
 
 * PO file format:

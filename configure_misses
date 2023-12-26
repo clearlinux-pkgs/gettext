@@ -134,6 +134,8 @@ Configure miss: priv.h
 Configure miss: priv.h
 Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
+Configure miss: random.h
+Configure miss: random.h
 Configure miss: stdckdint.h
 Configure miss: stdckdint.h
 Configure miss: stdckdint.h
@@ -144,8 +146,6 @@ Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
 Configure miss: tparam
 Configure miss: tparam
-Configure miss: tparm
-Configure miss: tparm
 Configure miss: unreachable
 Configure miss: unreachable
 Configure miss: unreachable
@@ -156,10 +156,6 @@ Configure miss: unreachable
 Configure miss: unreachable
 Configure miss: unreachable
 Configure miss: unreachable
-Configure miss: where termcap library functions come from
-Configure miss: where termcap library functions come from
-Configure miss: where terminfo library functions come from
-Configure miss: where terminfo library functions come from
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
@@ -212,14 +208,6 @@ Configure miss: whether pow can be used without linking with libm
 Configure miss: whether pow can be used without linking with libm
 Configure miss: whether pow can be used without linking with libm
 Configure miss: whether pow can be used without linking with libm
-Configure miss: whether printf supports size specifiers as in C23
-Configure miss: whether printf supports size specifiers as in C23
-Configure miss: whether printf supports size specifiers as in C23
-Configure miss: whether printf supports size specifiers as in C23
-Configure miss: whether printf supports the 'lc' directive correctly
-Configure miss: whether printf supports the 'lc' directive correctly
-Configure miss: whether printf supports the 'lc' directive correctly
-Configure miss: whether printf supports the 'lc' directive correctly
 Configure miss: whether printf supports the 'n' directive
 Configure miss: whether printf supports the 'n' directive
 Configure miss: whether printf supports the 'n' directive
@@ -236,12 +224,6 @@ Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether snprintf fully supports the 'n' directive
 Configure miss: whether snprintf fully supports the 'n' directive
-Configure miss: whether strtol works
-Configure miss: whether strtol works
-Configure miss: whether strtoul works
-Configure miss: whether strtoul works
-Configure miss: whether strtoul works
-Configure miss: whether strtoul works
 Configure miss: whether the C compiler is actually a C++ compiler
 Configure miss: whether the C compiler is actually a C++ compiler
 Configure miss: whether the compiler is clang

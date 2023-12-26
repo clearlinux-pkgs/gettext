@@ -10,7 +10,6 @@ Remmina
 asunder
 authconfig
 avahi
-caribou
 clutter
 clutter-gtk
 cockpit
@@ -25,6 +24,7 @@ flatpak
 flatpak-builder
 fontconfig
 gdl
+geany
 gimp
 gnome-applets
 gnome-backgrounds
@@ -82,9 +82,9 @@ powertop
 pulseaudio
 qalculate-gtk
 qtwebengine
-redshift
 shared-mime-info
 sound-theme-freedesktop
+sysprof
 system-config-printer
 thermal_daemon
 thermal_monitor
