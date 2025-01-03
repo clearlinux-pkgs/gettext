@@ -44,6 +44,8 @@ Configure miss: acl_delete_file_np
 Configure miss: acl_delete_file_np
 Configure miss: acl_free_text
 Configure miss: acl_free_text
+Configure miss: acl_get_link_np
+Configure miss: acl_get_link_np
 Configure miss: acl_to_short_text
 Configure miss: acl_to_short_text
 Configure miss: bool, true, false
@@ -86,12 +88,12 @@ Configure miss: fpurge
 Configure miss: fpurge
 Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
-Configure miss: gcc option to enable large file support
-Configure miss: gcc option to enable large file support
-Configure miss: gcc option to enable large file support
-Configure miss: gcc option to enable large file support
-Configure miss: gcc option to enable large file support
-Configure miss: gcc option to enable large file support
+Configure miss: gcc option to support large files
+Configure miss: gcc option to support large files
+Configure miss: gcc option to support large files
+Configure miss: gcc option to support large files
+Configure miss: gcc option to support large files
+Configure miss: gcc option to support large files
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
@@ -104,16 +106,24 @@ Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: getppriv
 Configure miss: getppriv
+Configure miss: gobjc
+Configure miss: gobjc
 Configure miss: ioctl with POSIX signature
 Configure miss: ioctl with POSIX signature
 Configure miss: jar
 Configure miss: jar
 Configure miss: jar
 Configure miss: jar
+Configure miss: libcx/spawn2.h
+Configure miss: libcx/spawn2.h
+Configure miss: library containing setfilecon
+Configure miss: library containing setfilecon
 Configure miss: library needed for semaphore functions
 Configure miss: library needed for semaphore functions
 Configure miss: libxml2/libxml/xmlversion.h
 Configure miss: libxml2/libxml/xmlversion.h
+Configure miss: lutimens
+Configure miss: lutimens
 Configure miss: mbslen
 Configure miss: mbslen
 Configure miss: mbslen
@@ -136,14 +146,14 @@ Configure miss: pstat_getprocvm
 Configure miss: pstat_getprocvm
 Configure miss: random.h
 Configure miss: random.h
-Configure miss: stdckdint.h
-Configure miss: stdckdint.h
-Configure miss: stdckdint.h
-Configure miss: stdckdint.h
-Configure miss: stdckdint.h
-Configure miss: stdckdint.h
+Configure miss: reasonable pthread_rwlock wait queue handling
+Configure miss: reasonable pthread_rwlock wait queue handling
+Configure miss: selinux/selinux.h
+Configure miss: selinux/selinux.h
 Configure miss: strerror_r with POSIX signature
 Configure miss: strerror_r with POSIX signature
+Configure miss: sys/smack.h
+Configure miss: sys/smack.h
 Configure miss: tparam
 Configure miss: tparam
 Configure miss: unreachable
@@ -156,6 +166,8 @@ Configure miss: unreachable
 Configure miss: unreachable
 Configure miss: unreachable
 Configure miss: unreachable
+Configure miss: utimens
+Configure miss: utimens
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
@@ -166,12 +178,26 @@ Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
 Configure miss: whether -Wno-missing-field-initializers is needed
+Configure miss: whether C compiler handles -Wthread-safety
+Configure miss: whether C compiler handles -Wthread-safety
+Configure miss: whether C compiler handles -Wthread-safety
+Configure miss: whether C compiler handles -Wthread-safety
+Configure miss: whether C compiler handles -Wthread-safety
+Configure miss: whether C compiler handles -Wthread-safety
+Configure miss: whether C compiler handles -Wthread-safety
+Configure miss: whether C compiler handles -Wthread-safety
+Configure miss: whether C compiler handles -Wthread-safety
+Configure miss: whether C compiler handles -Wthread-safety
 Configure miss: whether C symbols are prefixed with underscore at the linker level
 Configure miss: whether C symbols are prefixed with underscore at the linker level
 Configure miss: whether C symbols are prefixed with underscore at the linker level
 Configure miss: whether C symbols are prefixed with underscore at the linker level
 Configure miss: whether SEEK_DATA works but is incompatible with GNU
 Configure miss: whether SEEK_DATA works but is incompatible with GNU
+Configure miss: whether _putenv is declared
+Configure miss: whether _putenv is declared
+Configure miss: whether _putenv is declared
+Configure miss: whether _putenv is declared
 Configure miss: whether btowc is consistent with mbrtowc in the C locale
 Configure miss: whether btowc is consistent with mbrtowc in the C locale
 Configure miss: whether ctype.h defines __header_inline
@@ -190,6 +216,16 @@ Configure miss: whether fabs can be used without linking with libm
 Configure miss: whether fabs can be used without linking with libm
 Configure miss: whether fflush works on input streams
 Configure miss: whether fflush works on input streams
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
 Configure miss: whether fpurge is declared
 Configure miss: whether fpurge is declared
 Configure miss: whether gai_strerrorA is declared
@@ -204,14 +240,20 @@ Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether mbswidth is declared in <wchar.h>
 Configure miss: whether mbswidth is declared in <wchar.h>
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
 Configure miss: whether pow can be used without linking with libm
 Configure miss: whether pow can be used without linking with libm
 Configure miss: whether pow can be used without linking with libm
 Configure miss: whether pow can be used without linking with libm
-Configure miss: whether printf supports the 'n' directive
-Configure miss: whether printf supports the 'n' directive
-Configure miss: whether printf supports the 'n' directive
-Configure miss: whether printf supports the 'n' directive
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
@@ -222,6 +264,18 @@ Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether pthread_sigmask is a macro
+Configure miss: whether realloc (..., 0) returns nonnull
+Configure miss: whether realloc (..., 0) returns nonnull
+Configure miss: whether realloc (..., 0) returns nonnull
+Configure miss: whether realloc (..., 0) returns nonnull
+Configure miss: whether realloc (..., 0) returns nonnull
+Configure miss: whether realloc (..., 0) returns nonnull
+Configure miss: whether realloc should abort upon undefined behaviour
+Configure miss: whether realloc should abort upon undefined behaviour
+Configure miss: whether realloc should abort upon undefined behaviour
+Configure miss: whether realloc should abort upon undefined behaviour
+Configure miss: whether realloc should abort upon undefined behaviour
+Configure miss: whether realloc should abort upon undefined behaviour
 Configure miss: whether snprintf fully supports the 'n' directive
 Configure miss: whether snprintf fully supports the 'n' directive
 Configure miss: whether the C compiler is actually a C++ compiler
@@ -246,6 +300,8 @@ Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether the compiler supports GNU Objective C
+Configure miss: whether the compiler supports GNU Objective C
 Configure miss: whether this system supports file names of any length
 Configure miss: whether this system supports file names of any length
 Configure miss: whether to activate relocatable installation
@@ -266,15 +322,9 @@ Configure miss: windres
 Configure miss: windres
 Configure miss: working nanosleep
 Configure miss: working nanosleep
-Configure miss: x86_64-generic-linux-gnu-file
-Configure miss: x86_64-generic-linux-gnu-file
-Configure miss: x86_64-generic-linux-gnu-file
-Configure miss: x86_64-generic-linux-gnu-file
-Configure miss: x86_64-generic-linux-gnu-file
-Configure miss: x86_64-generic-linux-gnu-file
-Configure miss: x86_64-generic-linux-gnu-file
-Configure miss: x86_64-generic-linux-gnu-file
-Configure miss: x86_64-generic-linux-gnu-file
-Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-clang
+Configure miss: x86_64-generic-linux-gnu-clang
+Configure miss: x86_64-generic-linux-gnu-gobjc
+Configure miss: x86_64-generic-linux-gnu-gobjc
 Configure miss: xattr library with ATTR_ACTION_PERMISSIONS
 Configure miss: xattr library with ATTR_ACTION_PERMISSIONS

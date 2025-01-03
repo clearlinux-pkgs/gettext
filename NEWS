@@ -1,3 +1,96 @@
+Version 0.23.1 - December 2024
+
+* Bug fixes:
+  - Building with libxml2 >= 2.12.0 and gcc >= 14 now works.
+  - XML: The value of the xml:lang attribute, inserted by msgfmt, is now
+    more correct.
+
+Version 0.23 - December 2024
+
+# Internationalized data formats:
+  * XML:
+    o The escaping of characters such as & < > has been changed:
+      - No escaping is done any more by xgettext, when creating a POT file.
+      - Instead, extra escaping can be requested for the msgfmt pass, when
+        merging into an XML file.
+      - The default value of 'escape' in the <gt:escapeRule> was "yes";
+        now it is "no".
+      This means that existing translations of older POT files may no longer
+      fully apply. As a maintainer of a package that has translatable XML files,
+      you need to regenerate the POT file and pass it on to your translators.
+    o XML schemas for .its and .loc files are now provided.
+    o The value of the xml:lang attribute, inserted by msgfmt, now conforms
+      to W3C standards.
+    o 'msgfmt --xml' accept an option --replace-text, that causes the output
+      to be a mono-lingual XML file instead of a multi-lingual XML file.
+    o xgettext and 'msgfmt --xml' now support DocBook XML files.
+  * Desktop: xgettext now produces POT files with correct line numbers.
+
+# Programming languages support:
+  * Python:
+    o xgettext now assumes source code for Python 3 rather than Python 2.
+      This affects the interpretation of escape sequences in string literals.
+    o xgettext now recognizes the f-string syntax.
+  * Scheme:
+    o xgettext now supports the option '-L Guile' as an alternative to
+      '-L Scheme'.  They are nearly equivalent.  They differ in the
+      interpretation of escape sequences in string literals: While
+      'xgettext -L Scheme' assumes the R6RS and R7RS syntax of string literals,
+      'xgettext -L Guile' assumes the syntax of string literals understood by
+      Guile 2.x and 3.0 (without command-line option '--r6rs' or '--r7rs', and
+      before a '#!r6rs' directive is seen).
+    o xgettext now recognizes comments of the form '#; <expression>'.
+  * Java: xgettext now has an improved recognition of format strings when the
+    String.formatted method is used.
+  * JavaScript:
+    o xgettext now parses template literals inside JSX correctly.
+    o xgettext has a new option --tag that customizes the behaviour of tagged
+      template literals.
+  * C#:
+    o The build system and tools now also support 'dotnet' (.NET) as C#
+      implementation.  In order to declare a preference for 'dotnet' over
+      'mono', you can use the configure option '--enable-csharp=dotnet'.
+    o xgettext now recognizes strings with embedded expressions (a.k.a.
+      interpolated strings).
+  * awk: xgettext now recognizes string concatenation by juxtaposition.
+  * Smalltalk: xgettext now recognizes the string concatenation operator ','.
+  * Vala: xgettext now has an improved recognition of format strings when the
+    string.printf method is used.
+  * Glade: xgettext has improved support for GtkBuilder 4.
+  * Tcl: With the recently released Tcl 9.0, characters outside the Unicode BMP
+    in Tcl message catalogs (.msg files) will work regardless of the locale's
+    encoding.
+  * Perl:
+    o xgettext now reports warnings instead of fatal errors.
+    o xgettext now recognizes strings with embedded expressions (a.k.a.
+      interpolated strings).
+  * PHP:
+    o xgettext now recognizes strings with embedded expressions.
+    o xgettext now scans Heredoc and Nowdoc strings correctly.
+    o xgettext now regards the format string directives %E, %F, %g, %G, %h, %H
+      as valid.
+
+# Runtime behaviour:
+  * In the C.UTF-8 locale, like in the C locale, the *gettext() functions
+    now return the msgid untranslated. This is relevant for GNU systems,
+    Linux with musl libc, FreeBSD, NetBSD, OpenBSD, Cygwin, and Android.
+
+# Documentation:
+  * The section "Preparing Strings" now gives more advice how to deal with
+    string concatenation and strings with embedded expressions.
+
+# xgettext:
+  * Most of the diagnostics emitted by xgettext are now labelled as
+    "warning" or "error".
+
+# msgmerge:
+  * The option '--sorted-output' is now deprecated.
+
+# libgettextpo library:
+  * This library is now multithread-safe.
+  * The function 'po_message_set_format' now supports resetting a format string
+    mark.
+
 Version 0.22.5 - February 2024
 
 * The replacements for the printf()/fprintf()/... functions that are
@@ -508,9 +601,9 @@ Version 0.18.3 - July 2013
     The gnu::autosprintf class now provides an assignment operator.
 
   - Glade:
-    xgettext now supports GtkBuider file format used by Glade 3.
+    xgettext now supports GtkBuilder file format used by Glade 3.
     xgettext now also extracts contexts (msgctxt) from Glade 2 and
-    GtkBuider files.
+    GtkBuilder files.
 
   - JavaScript:
     xgettext now partially supports JavaScript.  Since the current
